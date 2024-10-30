@@ -1,0 +1,190 @@
+<!doctype html>
+<html>
+    
+<head>
+    <meta charset="utf-8">
+    <title>Tela de Comprovante</title>
+    <link rel="stylesheet" href="../../estilos/comprovante_alt.css">
+    <link rel="icon" href="../../favicon.png">
+</head>
+
+<body>
+    <div class="tela">
+        <div class="tela-aprov" id="tela-aprov">
+            <div class="header">
+                <img src="../../recursos/banco/logo-branca.svg" style="height: 50px; margin-left: 704px;" alt="Logo">
+                <div class="header-content">
+                    <div class="banco-dados">
+                        <div class="banco-nome">BANCO BTG PACTUAL S.A.</div>
+                        <div class="banco-cnpj">CNPJ: 30.306.294/0002-26</div>
+                    </div>
+                    <div class="banco-div"></div>
+                    <div class="banco-sair">SAIR</div>
+                </div>
+            </div>
+            <div class="menu">
+                <div class="menu-bg"></div>
+                <div class="menu-nav">
+                    <div class="page-not">
+                        <img src="../../recursos/telas/home.svg" alt="Home" style="height: 24px">
+                        <div>Home</div>
+                    </div>
+                    <div class="page-not">
+                        <img src="../../recursos/telas/pageview.svg" alt="Consulta" style="height: 24px">
+                        <div>Consulta</div>
+                    </div>
+                    <div class="page-not">
+                        <img src="../../recursos/telas/assignment.svg" alt="Cadastros" style="height: 24px">
+                        <div>Cadastros</div>
+                    </div>
+                    <div class="page-not">
+                        <img src="../../recursos/telas/savings-2.svg" alt="Crédito Empresarial" style="height: 24px">
+                        <div>Crédito Empresarial</div>
+                    </div>
+                    <div class="page-not">
+                        <img src="../../recursos/telas/priority.svg" alt="Aprovações" style="height: 24px">
+                        <div>Aprovações</div>
+                    </div>
+                    <div class="page-select">
+                        <img src="../../recursos/telas/universal_currency_alt-2.svg" alt="Pagamentos" style="height: 24px">
+                        <div>Pagamentos</div>
+                    </div>
+                    <div class="page-not">
+                        <img src="../../recursos/telas/finance.svg" alt="Investimentos" style="height: 24px">
+                        <div>Investimentos</div>
+                    </div>
+                    <div class="page-not">
+                        <img src="../../recursos/telas/settings.svg" alt="Configurações" style="height: 24px">
+                        <div>Configurações</div>
+                    </div>
+                </div>
+            </div>
+            <div class="secoes">
+                <div class="secao">
+                    <div class="secao-titulo">Comprovante de Transferência</div>
+                    <div class="secao-div"></div>
+                    
+					<div class="colunas">
+					
+					<div class="espaco1">
+						<div class="espaco-titulo">Dados da Transferência</div>
+						<div class="item">
+							<div class="input-titulo">Data</div>
+                    		<input type="text" placeholder="dd/mm/aaaa" class="input-dados" id="input-data" readonly>
+						</div>
+						<div class="item">
+							<div class="input-titulo">Hora</div>
+                    		<input type="text" placeholder="00:00" class="input-dados" id="input-hora" readonly>
+						</div>
+						<div class="item">
+							<div class="input-titulo">Valor</div>
+                   			<input type="text" placeholder="R$ 0.000,00" value="R$ 1.000,00" class="input-dados" id="input-valor">
+						</div>
+						<div class="item">
+							<div class="input-titulo">Autenticação</div>
+                    		<input type="text" placeholder="Autenticação" class="input-dados" id="input-autenticacao">
+						</div>
+						<div class="item">
+							<div class="input-titulo">Status</div>
+                    		<input type="text" placeholder="Status" class="input-dados" id="input-status">
+						</div>
+                    </div>
+					
+					<div class="espaco2">
+						<div class="espaco-titulo">Dados do Pagador</div>
+						<div class="item">
+							<div class="input-titulo">Nome</div>
+                    		<input type="text" class="input-dados" value="BANCO BTG PACTUAL S.A." readonly>
+						</div>
+						<div class="item">
+							<div class="input-titulo">CNPJ</div>
+                    		<input type="text" class="input-dados" value="30.306.294/0002-26" readonly>
+						</div>
+						<div class="item">
+							<div class="input-titulo">Intituição</div>
+                    		<input type="text" class="input-dados" value="BC BTG PACTUAL SA" readonly>
+						</div>
+						<div class="item">
+							<div class="input-titulo">Agência</div>
+                    		<input type="text" class="input-dados" value="0001" readonly>
+						</div>
+						<div class="item">
+							<div class="input-titulo">Conta</div>
+                    		<input type="text" class="input-dados" value="09902734-4" readonly>
+						</div>
+                    </div>
+						
+					<div class="espaco3">
+						<div class="espaco-titulo">Dados do Recebedor</div>
+						<div class="item">
+							<div class="input-titulo">Nome</div>
+                    		<input type="text" class="input-pagador" placeholder="Razão Social ou Nome do Cliente">
+						</div>
+						<div class="item">
+							<div class="input-titulo">CNPJ</div>
+                    		<input type="text" class="input-pagador" id="input-cnpj" placeholder="00.000.000/0000-00">
+						</div>
+						<div class="item">
+							<div class="input-titulo">Intituição</div>
+                    		<input type="text" class="input-pagador" placeholder="Banco do Cliente">
+						</div>
+						<div class="item">
+							<div class="input-titulo">Agência</div>
+                    		<input type="text" class="input-pagador" placeholder="0000">
+						</div>
+						<div class="item">
+							<div class="input-titulo">Conta</div>
+                    		<input type="text" class="input-pagador" placeholder="0000000-0">
+						</div>
+						<div class="item">
+							<div class="input-titulo">Chave PIX</div>
+                    		<input type="text" class="input-pagador" placeholder="Chave PIX" value="Não utilizada" id="input-pix">
+						</div>
+                    </div>
+							
+					</div>
+					
+                    <div class="botoes">
+                        <img src="../../recursos/telas/arrow_back_ios_new.svg" alt="Editar" style="height: 18px;"> Voltar
+                    </div>
+                </div>
+            </div>
+            <div class="final"></div>
+        </div>
+		
+        <div class="config" class="ocultar-na-impressao">
+			
+			<div class="config-container">
+				<div class="config-titulo">Data e Hora</div>
+				<input type="date" class="input-config" id="data" max="9999-12-31">
+				<input type="time" class="input-config" id="hora" max="23:59">
+			</div>
+			
+            <div class="config-container">
+                <div class="config-titulo">Status da Transferência</div>
+                <select id="status" class="input-select">
+                    <option value="Concluída" selected="">Concluída</option>
+					<option value="Efetuada">Efetuada</option>
+                    <option value="Não concluída">Não concluída</option>
+                    <option value="Estornada">Estornada</option>
+                    <option value="Outro">Outro</option>
+                </select>
+            </div>
+			<div class="config-container">
+                <div class="config-titulo">Chave PIX</div>
+                <select id="pix" class="input-select">
+                    <option value="Não utilizada" selected="">Não utilizada</option>
+                    <option value="Outro">Outro</option>
+                </select>
+            </div>
+            
+            <button id="botao-imprimir">EXPORTAR</button>
+        </div>
+    </div>
+	<script src="../../scripts/comprovante_alt/scripts.js"></script>
+	<script src="../../scripts/comprovante_alt/autenticacao.js"></script>
+	<script src="../../scripts/comprovante_alt/data-hora.js"></script>
+	<script src="../../scripts/comprovante_alt/imprimir.js"></script>
+</body>
+    
+</html>

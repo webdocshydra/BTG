@@ -1,0 +1,398 @@
+/* CSS Document */
+
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    margin: 0;
+    display: inline-flex;
+    justify-content: flex-start;
+}
+
+#tela {
+    width: 1576px;
+    height: 860px;
+    background-color: #F3F4F6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+#final {
+    width: 100%;
+    height: 7px;
+    background-color: #001E62;
+    position: absolute;
+    bottom: 0;
+}
+
+header {
+    width: 100%;
+    height: 112px;
+    background-color: #001E62;
+    display: grid;
+    align-items: center;;
+    justify-items: flex-end;
+    position: relative;
+}
+
+#logo {
+    height: 50px;
+    display: block;
+    position: absolute;
+    align-self: center;
+    justify-self: center;
+}
+
+#header-menu {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 90px;
+    gap: 26px;
+    color: white;
+    font-family: 'Poppins';
+    font-size: 12px;
+    font-weight: 400;
+    font-feature-settings: 'pnum' 1, 'lnum' 1;
+}
+
+#header-dados {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 3px;
+}
+
+#banco-cnpj {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#header-div {
+    width: 1px;
+    height: 70px;
+    background-color: white;
+}
+
+#sair {
+    font-size: 14px;
+}
+
+#menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#menu-bg {
+    height: 35px;
+    background-color: #001E62;
+}
+
+#menu-nav {
+    margin-top: -35px;
+
+    height: 100px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    display: inline-flex;
+    align-self: center;
+}
+
+.pagina {
+    width: 192px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    color: #6b7280;
+    font-family: 'Poppins';
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+}
+
+#selecionada {
+    background-color: #e3e8f6;
+    border-radius: 8px;
+    color: #001E62;
+    font-weight: 600;
+}
+
+#icone {
+    height: 24px;
+}
+
+#conteudo {
+    margin-top: 14px;
+
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px
+}
+
+.coluna {
+    width: 458px;
+    height: auto;
+    padding: 20px;
+
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.coluna-dupla {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.coluna h1 {
+    color: black;
+    font-family: 'Poppins';
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: 0.4px;
+
+    display: block;
+    margin: 0px 0px 7px 0px;
+}
+
+#coluna-div {
+    width: 458px;
+    height: 1px;
+    background: #E5E7EB;
+}
+
+#campo {
+    margin-top: 20px;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    display: block;
+
+    color: #6B7280;
+    font-family: 'Poppins';
+    font-size: 14px;
+    font-weight: 400;
+
+    margin-bottom: 8px;
+}
+
+.label {
+    display: block;
+
+    color: #6B7280;
+    font-family: 'Poppins';
+    font-size: 14px;
+    font-weight: 400;
+
+    margin-bottom: 8px;
+}
+
+.campo {
+    cursor: pointer;
+
+    max-height: 40px;
+    min-width: 219px;
+    box-sizing: border-box;
+    padding: 8px 14px;
+    flex: 1 1;
+    
+    background-color: white;
+    border: 2px solid #E5E7EB;
+    border-radius: 8px;
+
+    color: #1a1a1a;
+    font-family: 'Poppins';
+    font-size: 14px;
+    font-weight: 500;
+    font-feature-settings: 'pnum' 1, 'lnum' 1;
+
+    overflow: hidden; /* esconde texto que passe do tamanho */
+    white-space: nowrap; /* não quebra a linha */
+    text-overflow: ellipsis; /* adiciona "..." */
+}
+
+button#botao {
+    margin-top: 20px;
+
+    height: 40px;
+    padding-left: 10px;
+    padding-right: 15px;
+    gap: 7px;
+
+    background-color: #001E62;
+    border: none;
+    border-radius: 8px;
+
+    display: inline-flex;
+    align-items: center;
+
+    color: white;
+    font-family: 'Poppins';
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.12px;
+    
+    white-space: nowrap;
+}
+
+#icone {
+    height: 24px;
+    width: 24px;
+}
+
+.campo-duplo {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+}
+
+#aprovado {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 14px;
+    color: #0F9D58;
+
+    cursor: default;
+}
+
+#pendente {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 14px;
+
+    cursor: default;
+}
+
+.valor {
+    position: relative;
+}
+
+#span {
+    position: absolute;
+    top: 39px;
+    left: 16px;
+
+    color: #1a1a1a;
+    font-family: 'Poppins';
+    font-size: 14px;
+    font-weight: 500;
+    font-feature-settings: 'pnum' 1, 'lnum' 1;
+}
+
+input#i-valor{
+    padding: 8px 14px 8px 36px;
+    max-width: 219px;
+}
+
+#config {
+    width: 300px;
+    padding-top: 20px;
+    padding-left: 20px;
+    gap: 20px;
+
+    border-left: 1px solid grey;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#config-container {
+    width: 300px;
+    box-sizing: border-box;
+    padding: 18px;
+
+    border: 1px solid #888888;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#config-container h1 {
+    color: #1a1a1a;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 600;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+
+    margin: 0px;
+}
+
+.config-item {
+    margin-top: 16px;
+    gap: 4px;
+}
+
+#config-container label {
+    color: #1a1a1a;
+    font-family: 'Poppins';
+    font-size: 15px;
+    font-weight: 500;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+
+    display: block;
+}
+
+#config-container select {
+    cursor: pointer;
+
+    width: 100%;
+    height: 44px;
+    box-sizing: border-box;
+    padding: 10px 18px 10px 18px;
+
+    background-color: #cbe1cc;
+    border: 1px solid #416f43;
+    border-radius: 6px;
+
+    color: #333;
+    font-family: 'Poppins';
+    font-size: 15px;
+    font-weight: 600;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+}
+
+#imprimir {
+    cursor: pointer;
+
+    width: 100%;
+    height: 44px;
+    box-sizing: border-box;
+    padding: 10px 20px;
+
+    background-color: #4caf50;
+    border: none;
+    border-radius: 5px;
+
+    color: white;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.ocultar-na-impressao {
+    display: none !important;
+}

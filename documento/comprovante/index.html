@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+    
+<head>
+    <meta charset="utf-8">
+    <title>Comprovante de Transferência</title>
+    <link rel="stylesheet" href="../../estilos/comprovante.css">
+    <link rel="icon" href="../../favicon.png">
+</head>
+	
+<body>
+	<div class="tela">
+		<div class="documento" id="documento">
+			
+			<div class="header">
+				<div class="titulo">Comprovante de Transferência</div>
+				<img src="../../recursos/banco/simbolo.svg" alt="Logo1" id="logo">
+			</div>
+			
+			<div class="data-hora">
+				<span class="dh-texto" id="data">[DATA]</span>
+				<span class="dh-texto">-</span>
+				<span class="dh-texto" id="hora">[HORA]</span>
+			</div>
+			
+			<div class="conteudo">
+				<div class="opcoes">
+					<div class="linha">
+						<div class="texto-item">Valor</div>
+						<div class="texto-resultado">R$ <span id="valor">[VALOR]</span></div>
+					</div>
+					<div class="linha">
+						<div class="texto-item">Autenticação</div>
+						<div class="texto-resultado"><span id="autenticacao">[AUTENTICAÇÃO]</span></div>
+					</div>
+					<div class="linha">
+						<div class="texto-item">Status</div>
+						<div class="texto-resultado"><span id="status">[STATUS]</span></div>
+					</div>
+				</div>
+				<div class="div-comprovante"></div>
+				<div class="texto-titulo">Dados do Pagador</div>
+				<div class="opcoes" style="margin-top: 12px">
+					<div class="linha">
+						<div class="texto-item">Nome</div>
+						<div class="texto-resultado">BANCO BTG PACTUAL S.A.</div>
+					</div>
+					<div class="linha">
+						<div class="texto-item">CPF / CNPJ</div>
+						<div class="texto-resultado">30.306.294/0002-26</div>
+					</div>
+					<div class="linha">
+						<div class="texto-item">Instituição</div>
+						<div class="texto-resultado">BC BTG PACTUAL SA</div>
+					</div>
+					<div class="linha">
+						<div class="texto-item">Agência</div>
+						<div class="texto-resultado">0001</div>
+					</div>
+					<div class="linha">
+						<div class="texto-item">Conta</div>
+						<div class="texto-resultado">09902734-4</div>
+					</div>
+				</div>
+				<div class="div-comprovante"></div>
+				<div class="texto-titulo">Dados do Recebedor</div>
+				<div class="opcoes" style="margin-top: 12px">
+					<div class="linha">
+						<div class="texto-item">Nome</div>
+						<div class="texto-resultado"><span id="nome">[NOME]</span></div>
+					</div>
+					<div class="linha">
+						<div class="texto-item">CPF / CNPJ</div>
+						<div class="texto-resultado"><span id="cnpj">[CNPJ]</span></div>
+					</div>
+					<div class="linha">
+						<div class="texto-item">Instituição</div>
+						<div class="texto-resultado"><span id="banco">[BANCO]</span></div>
+					</div>
+					<div class="linha">
+						<div class="texto-item">Agência</div>
+						<div class="texto-resultado"><span id="agencia">[AGÊNCIA]</span></div>
+					</div>
+					<div class="linha">
+						<div class="texto-item">Conta</div>
+						<div class="texto-resultado"><span id="conta">[CONTA]</span></div>
+					</div>
+					<div class="linha">
+						<div class="texto-item">Chave PIX</div>
+						<div class="texto-resultado"><span id="pix">[CHAVE PIX]</span></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<div class="config" class="ocultar-na-impressao" id="config">
+			
+			<div class="config-coluna">
+				<div class="config-container">
+					<div class="config-titulo">Dados do Comprovante</div>
+					<input type="date" class="input-config" id="i-data" max="9999-12-31" required>
+					<input type="time" class="input-config" id="i-hora" max="23:59" required>
+					<input type="text" class="input-config" id="i-valor" placeholder="Valor do Crédito" required>
+				</div>
+				<div class="config-container">
+					<div class="config-titulo">Status</div>
+					
+					<select class="config-select" id="status-select" required>
+						<option value="[STATUS]" disabled selected>Selecione uma opção</option>
+                    	<option value="Efetuada">Efetuada</option>
+                    	<option value="Concluída">Concluída</option>
+						<option value="Não concluída">Não concluída</option>
+						<option value="ERRO NA OPERAÇÃO">Erro na operação</option>
+						<option value="Outro">Outro (editável)</option>
+                	</select>
+					
+					<input type="text" class="input-config" style="display: none;" id="i-status" placeholder="Status" required>
+				</div>
+				<div class="config-container">
+					<div class="config-titulo">Chave PIX</div>
+					
+					<select class="config-select" id="pix-select" required>
+						<option value="[CHAVE PIX]" disabled selected>Selecione uma opção</option>
+						<option value="Não utilizada">Não</option>
+						<option value="Sim">Sim (editável)</option>
+                	</select>
+					
+					<input type="text" class="input-config" style="display: none;" id="i-pix" placeholder="Chave PIX" required>
+				</div>
+			</div>
+				
+			<div class="config-coluna">
+				<div class="config-container">
+					<div class="config-titulo">Dados do Recebedor</div>
+					<input type="text" class="input-config" id="i-nome" placeholder="Nome" required>
+					<input type="text" class="input-config" id="i-cnpj" placeholder="00.000.000/0000-00" required>
+					<input type="text" class="input-config" id="i-banco" placeholder="Banco" required>
+					<input type="text" class="input-config" id="i-agencia" placeholder="Agência" required>
+					<input type="text" class="input-config" id="i-conta" placeholder="Conta" required>
+				</div>
+				
+				<button class="botao-desabilitado" id="botao-imprimir">EXPORTAR</button>
+			</div>		
+		</div>
+	</div>
+	<script src="../../scripts/comprovante/cnpj.js"></script>
+	<script src="../../scripts/comprovante/imprimir.js"></script>
+	<script src="../../scripts/comprovante/data-hora.js"></script>
+	<script src="../../scripts/comprovante/inputs.js"></script>
+	<script src="../../scripts/comprovante/titulo.js"></script>
+	<script src="../../scripts/comprovante/valor.js"></script>
+	<script src="../../scripts/comprovante/status.js"></script>
+	<script src="../../scripts/comprovante/pix.js"></script>
+	<script src="../../scripts/comprovante/autenticacao.js"></script>
+</body>
+	
+</html>

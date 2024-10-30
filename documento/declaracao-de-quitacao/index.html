@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+    
+<head>
+    <meta charset="utf-8">
+    <title>Declaração de Quitação</title>
+    <link rel="stylesheet" href="../../estilos/declaracao.css">
+    <link rel="icon" href="../../favicon.png">
+</head>
+	
+<body>
+	<div class="tela">
+		<div class="documento" id="documento">
+			
+			<div class="header">
+				<div class="titulo">Declaração de Quitação de Pendência</div>
+				<img src="../../recursos/banco/logo.svg" alt="Logo" id="logo">
+			</div>
+			
+			<div class="conteudo">
+				<div class="texto">
+					Fica atestado nessa declaração referente ao procedimento de liberação de crédito do contemplado <span id="titular">[TITULAR]</span> que possui a responsabilidade de Sócio-Administrador da empresa de CNPJ: <span id="cnpj">[CNPJ]</span> e Razão Social: <span id="razao-social">[RAZÃO SOCIAL]</span> que ao concluir a pendência solicitada (<span id="pendencia">[PENDÊNCIA]</span>) pelo Banco BTG Pactual S.A. de CNPJ: 30.306.294/0002-26 juntamente ao Banco Central do Brasil de CNPJ: 00.038.166/0001-05 referente a aprovação do crédito liberado em sua titularidade, com o prazo de depósito do valor acordado em até <span id="tempo-limite">[TEMPO LIMITE]</span> após resolução da pendência informada.
+					<br><br>
+					<span class="texto-semibold">Data de Emissão: </span><span id="dia">[DD]</span> de <span id="mes">[MM]</span> de <span id="ano">[AAAA]</span>.
+				</div>
+			</div>
+			
+			<div class="assinaturas">
+				<div class="a-modelo">
+					<img src="../../recursos/banco/diretor.svg" class="svg-diretor" alt="Assinatura do Diretor">
+					<div class="a-div"></div>
+					<div class="texto">Alexandre Camara</div>
+					<div class="texto-bold">DIRETOR EXECUTIVO | Banco BTG</div>
+				</div>
+				<div class="a-modelo">
+					<img src="../../recursos/banco/gerente.svg" class="svg-gerente" alt="Assinatura do Gerente">
+					<div class="a-div"></div>
+					<div class="texto" id="gerente">[GERENTE]</div>
+					<div class="texto-bold">GERENTE DE CRÉDITO | Banco BTG</div>
+				</div>
+			</div>
+			
+			<div class="selos">
+				<img src="../../recursos/documentos/selo-declaracao.png" class="selo" alt="Selo">
+			</div>
+			
+		</div>
+	
+		<div class="config" class="ocultar-na-impressao" id="config">
+			
+				<div class="config-container">
+					<div class="config-titulo">Dados do Documento</div>
+					<input type="text" class="input-config" id="i-gerente" placeholder="Gerente" required>
+					<input type="date" class="input-config" id="i-data" max="9999-12-31" required>
+					<input type="text" class="input-config" id="i-pendencia" placeholder="Pedência" required>
+					<input type="text" class="input-config" id="i-tempo" placeholder="Tempo Limite" required>
+				</div>
+			
+				<div class="config-container">
+					<div class="config-titulo">Dados do Cliente</div>
+					<input type="text" class="input-config" id="i-titular" placeholder="Titular" required>
+					<input type="text" class="input-config" id="i-cnpj" placeholder="00.000.000/0000-00" required>
+					<input type="text" class="input-config" id="i-rs" placeholder="Razão Social" required>
+				</div>
+			
+			<button class="botao-desabilitado" id="botao-imprimir" disabled>EXPORTAR</button>
+		
+		</div>
+	</div>
+	<script src="../../scripts/declaracao/cnpj.js"></script>
+	<script src="../../scripts/declaracao/imprimir.js"></script>
+	<script src="../../scripts/declaracao/datas.js"></script>
+	<script src="../../scripts/declaracao/inputs.js"></script>
+	<script src="../../scripts/declaracao/titulo.js"></script>
+</body>
+	
+</html>

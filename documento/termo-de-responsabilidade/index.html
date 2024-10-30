@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+    
+<head>
+    <meta charset="utf-8">
+    <title>Termo de Responsabilidade</title>
+    <link rel="stylesheet" href="../../estilos/termo.css">
+    <link rel="icon" href="../../favicon.png">
+</head>
+	
+<body>
+	<div class="tela">
+		<div class="documento" id="documento">
+			
+			<div class="header">
+				<div class="titulo">Termo de Responsabilidade</div>
+				<img src="../../recursos/banco/logo.svg" alt="Logo" id="logo">
+			</div>
+			
+			<div class="conteudo">
+				<div class="texto">
+					A colaboradora <span id="gerente1">[GERENTE]</span> fala por meio deste Termo de Responsabilidade, junto ao Banco BTG Pactual S.A., instituição financeira de direito privado, com sede na Avenida Brigadeiro Faria Lima, nº 3477, cidade de São Paulo, Estado de São Paulo, CEP: 04538-133, inscrito no CNPJ sob o nº 30.306.294/0002-26.
+					<br><br>
+					A instituição financeira Banco BTG Pactual S.A. assegura por meio do diagnóstico apresentado pelo sistema que a única pendência para a conclusão do financiamento do cliente <span id="razao-social">[RAZÃO SOCIAL]</span>, cuja empresa no CNPJ de nº <span id="cnpj">[CNPJ]</span>, é a <span id="tipo-pendencia">[TIPO DE PENDÊNCIA]</span> <span id="pendencia">[PENDÊNCIA]</span>.
+					<br><br>
+					Informações detalhadas sobre o valor a ser liberado na conta de titularidade do cliente favorecido:
+					<br>
+					Valor do crédito: R$ <span id="valor">[VALOR DO CRÉDITO]</span> em <span id="parcelas">[PARCELAS]</span>x de R$ <span id="proposta-parcelas">[PROPOSTA-PARCELAS]</span>
+					<br>
+					Carência: <span id="prazo-carencia">[PRAZO-CARÊNCIA]</span> dias para efetuar a primeira parcela
+					<br>
+					Total de Juros: R$ <span id="proposta-juros">[PROPOSTA-JUROS]</span>
+					<br>
+					Total devido: R$ <span id="proposta-devido">[PROPOSTA-DEVIDO]</span>
+					<br>
+					Taxa de juros: <span id="taxa-juros">[TAXA DE JUROS]</span>
+					<br><br>
+					<span class="texto-semibold">Data de Emissão: </span><span id="dia">[DD]</span> de <span id="mes">[MM]</span> de <span id="ano">[AAAA]</span>.
+				</div>
+			</div>
+			
+			<div class="assinaturas">
+				<div class="a-modelo">
+					<img src="../../recursos/banco/diretor.svg" class="svg-diretor" alt="Assinatura do Diretor">
+					<div class="a-div"></div>
+					<div class="texto">Alexandre Camara</div>
+					<div class="texto-bold">DIRETOR EXECUTIVO | Banco BTG</div>
+				</div>
+				<div class="a-modelo">
+					<img src="../../recursos/banco/gerente.svg" class="svg-gerente" alt="Assinatura do Gerente">
+					<div class="a-div"></div>
+					<div class="texto" id="gerente2">[GERENTE]</div>
+					<div class="texto-bold">GERENTE DE CRÉDITO | Banco BTG</div>
+				</div>
+			</div>
+			
+			<div class="selos">
+				<img src="../../recursos/documentos/selo-termo.png" class="selo" alt="Selo">
+			</div>
+			
+		</div>
+	
+		<div class="config" class="ocultar-na-impressao" id="config">
+			
+				<div class="config-container">
+					<div class="config-titulo">Documento e Cliente</div>
+					<input type="text" class="input-config" id="i-gerente" placeholder="Gerente" required>
+					<input type="date" class="input-config" id="i-data" max="9999-12-31" required>
+					<input type="text" class="input-config" id="i-cnpj" placeholder="00.000.000/0000-00" required>
+					<input type="text" class="input-config" id="i-rs" placeholder="Razão Social" required>
+					<input type="text" class="input-config" id="i-tipo" placeholder="Tipo de Pendência" required>
+					<input type="text" class="input-config" id="i-pendencia" placeholder="Pedência" required>
+				</div>
+			
+				<div class="config-container">
+					<div class="config-titulo">Proposta de Crédito</div>
+					<input type="text" class="input-config" id="i-valor" placeholder="Valor do Crédito" required>
+					<input type="number" class="input-config" id="i-parcelas" placeholder="Parcelas" required>
+					<input type="number" class="input-config" id="i-carencia" placeholder="Prazo de Carência" required>
+				</div>
+			
+			<button class="botao-desabilitado" id="botao-imprimir" disabled>EXPORTAR</button>
+		
+		</div>
+	</div>
+	<script src="../../scripts/termo/cnpj.js"></script>
+	<script src="../../scripts/termo/proposta.js"></script>
+	<script src="../../scripts/termo/imprimir.js"></script>
+	<script src="../../scripts/termo/datas.js"></script>
+	<script src="../../scripts/termo/inputs.js"></script>
+	<script src="../../scripts/termo/titulo.js"></script>
+</body>
+	
+</html>

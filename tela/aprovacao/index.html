@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Aprovação</title>
+    <link rel="icon" href="../../favicon.png">
+    <link rel="stylesheet" href="../../estilos/aprovacao.css">
+</head>
+<body>
+    <div id="tela">
+        <header>
+            <img src="../../recursos/banco/logo-branca.svg" alt="Logo" id="logo">
+            <div id="header-menu">
+                <div id="header-dados">
+                    <span>BANCO BTG PACTUAL S.A.</span>
+                    <span id="banco-cnpj">CNPJ: 30.306.294/0002-26</span>
+                </div>
+                <div id="header-div"></div>
+                <span id="sair">SAIR</span>
+            </div>
+        </header>
+        <div id="menu">
+            <div id="menu-bg"></div>
+            <div id="menu-nav">
+                <div class="pagina">
+                    <img src="../../recursos/telas/home.svg" alt="Home" id="icone">
+                    Home
+                </div>
+                <div class="pagina">
+                    <img src="../../recursos/telas/pageview.svg" alt="Consulta" id="icone">
+                    Consulta
+                </div>
+                <div class="pagina">
+                    <img src="../../recursos/telas/assignment.svg" alt="Cadastros" id="icone">
+                    Cadastros
+                </div>
+                <div class="pagina" id="selecionada">
+                    <img src="../../recursos/telas/savings.svg" alt="Crédito Empresarial" id="icone">
+                    Crédito Empresarial
+                </div>
+                <div class="pagina">
+                    <img src="../../recursos/telas/priority.svg" alt="Aprovações" id="icone">
+                    Aprovações
+                </div>
+                <div class="pagina">
+                    <img src="../../recursos/telas/universal_currency_alt.svg" alt="Home" id="Pagamentos">
+                    Pagamentos
+                </div>
+                <div class="pagina">
+                    <img src="../../recursos/telas/finance.svg" alt="Investimentos" id="icone">
+                    Investimentos
+                </div>
+                <div class="pagina">
+                    <img src="../../recursos/telas/settings.svg" alt="Configurações" id="icone">
+                    Configurações
+                </div>
+            </div>
+        </div>
+        <div id="conteudo">
+            <div class="coluna">
+                <h1>Cadastro</h1>
+                <div id="coluna-div"></div>
+                <div id="campo">
+                    <label for="i-cnpj">CNPJ</label>
+                    <input type="text" placeholder="00.000.000/0001-00" id="i-cnpj" class="campo">
+                </div>
+                <div id="campo">
+                    <label for="i-rs">Razão Social</label>
+                    <input type="text" placeholder="Insira aqui a RAZÃO SOCIAL" id="i-rs" class="campo">
+                </div>
+                <div id="campo">
+                    <label for="i-data">Data de Abertura</label>
+                    <input type="date" placeholder="dd/mm/aaaa" max="9999-12-31" id="i-data" class="campo">
+                </div>
+                <div id="campo">
+                    <label for="i-protocolo">Protocolo de Atendimento</label>
+                    <input type="text" placeholder="Insira aqui o PROTOCOLO" id="i-protocolo" class="campo">
+                </div>
+                <button id="botao">
+                    <img src="../../recursos/telas/edit.svg" alt="Editar" id="icone">
+                    Atualizar Cadastro
+                </button>
+            </div>
+            <div class="coluna-dupla">
+                <div class="coluna">
+                    <h1>Proposta de Crédito</h1>
+                    <div id="coluna-div"></div>
+                    <div class="campo-duplo">
+                        <div id="campo" class="valor">
+                            <label for="i-valor">Valor do Crédito</label>
+                            <span id="span">R$</span>
+                            <input type="text" placeholder="0.000,00" id="i-valor" class="campo">
+                        </div>
+                        <div id="campo">
+                            <label for="i-parcelas">Parcelas</label>
+                            <input type="text" placeholder="Insira aqui a PARCELA" id="i-parcelas" class="campo">
+                        </div>
+                    </div>
+                    <div id="campo">
+                        <div class="label">Prazo para pagamento</div>
+                        <div class="campo" style="cursor: default;">Após processamento de informações</div>
+                    </div>
+                    <div id="campo">
+                        <label for="i-codigo">Código da Proposta</label>
+                        <input type="text" placeholder="Recarregue a página (gerador aleatório automático)" id="i-codigo" class="campo">
+                    </div>
+                </div>
+                <div class="coluna" id="dados-bancarios">
+                    <h1>Dados Bancários</h1>
+                    <div id="coluna-div"></div>
+                    <div id="campo">
+                        <label for="i-bc">Instituição</label>
+                        <input type="text" placeholder="Instituição" id="i-bc" class="campo">
+                    </div>
+                    <div class="campo-duplo">
+                        <div id="campo">
+                            <label for="i-ag">Agência</label>
+                            <input type="text" placeholder="0000" id="i-ag" class="campo">
+                        </div>
+                        <div id="campo">
+                            <label for="i-ct">Conta</label>
+                            <input type="text" placeholder="0000000-0" id="i-ct" class="campo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="coluna">
+                <h1>Status da Aprovação</h1>
+                <div id="coluna-div"></div>
+                <div class="campo-duplo">
+                    <div id="campo">
+                        <div class="label">Resultado da Análise</div>
+                        <div class="campo" id="aprovado">
+                            <img src="../../recursos/telas/check_circle.svg" alt="Aprovado" id="icone">
+                            Aprovada
+                        </div>
+                    </div>
+                    <div id="campo">
+                        <div class="label">Processamento</div>
+                        <div class="campo" id="pendente">
+                            <img src="../../recursos/telas/warning.svg" alt="Aviso" id="icone">
+                            Pendente
+                        </div>
+                    </div>
+                </div>
+                <div id="campo">
+                    <label for="i-pendecia">Pendência</label>
+                    <input type="text" placeholder="Informe aqui a PENDÊNCIA" id="i-pendecia" class="campo">
+                </div>
+                <button id="botao">
+                    <img src="../../recursos/telas/upload_file.svg" alt="Anexar" id="icone">
+                    Anexar
+                </button>
+            </div>
+        </div>
+        <div id="final"></div>
+    </div>
+    <div id="config">
+        <div id="config-container">
+            <h1>Configurações</h1>
+            <div class="config-item">
+                <label for="parcelas">Parcelas</label>
+                <select id="parcelas">
+                    <option value="12x" selected>12x</option>
+                    <option value="24x">24x</option>
+                    <option value="36x">36x</option>
+                    <option value="48x">48x</option>
+                    <option value="60x">60x</option>
+                    <option value="72x">72x</option>
+                    <option value="84x">84x</option>
+                    <option value="96x">96x</option>
+                    <option value="108x">108x</option>
+                    <option value="Outro">Outro</option>
+                </select>
+            </div>
+            <div class="config-item">
+                <label for="dados-bc">Dados Bancários</label>
+                <select id="dados-bc">
+                    <option value="NÃO Exibir" selected>NÃO Exibir</option>
+                    <option value="Exibir">Exibir</option>
+                </select>
+            </div>
+        </div>
+        <button id="imprimir">EXPORTAR</button>
+    </div>
+    <script src="../../scripts/aprovacao/titulo.js"></script>
+
+    <script src="../../scripts/aprovacao/cnpj.js"></script>
+    <script src="../../scripts/aprovacao/dados-bc.js"></script>
+    <script src="../../scripts/aprovacao/parcelas.js"></script>
+    <script src="../../scripts/aprovacao/proposta.js"></script>
+    <script src="../../scripts/aprovacao/valor.js"></script>
+    
+    <script src="../../scripts/aprovacao/imprimir.js"></script>
+</body>
+</html>

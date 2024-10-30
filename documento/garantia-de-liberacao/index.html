@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+    
+<head>
+    <meta charset="utf-8">
+    <title>Garantia de Liberação</title>
+    <link rel="stylesheet" href="../../estilos/garantia.css">
+    <link rel="icon" href="../../favicon.png">
+</head>
+	
+<body>
+	<div class="tela">
+		<div class="documento" id="documento">
+			
+			<div class="header">
+				<div class="titulo">Garantia de Liberação</div>
+				<img src="../../recursos/banco/logo.svg" alt="Logo do Banco" id="logo">
+			</div>
+			
+			<div class="conteudo">
+				<div class="texto">
+					<span class="texto-semibold">
+						<span id="gerente1">[GERENTE]</span> | Gerente de Crédito
+						<br>
+						Banco BTG Pactual S.A.
+						<br>
+						Avenida Brigadeiro Faria Lima, 3477 - Itaim Bibi, São Paulo - SP 04538-133
+					</span>
+					<br>
+					<br>
+					Prezados Senhores,
+					<br><br>
+					Eu, <span id="gerente2">[GERENTE]</span>, na qualidade de gerente bancário da instituição financeira BTG PACTUAL, situada no endereço acima mencionado, venho por meio desta carta formal confirmar a garantia de liberação de crédito conforme solicitado por <span id="cliente">[CLIENTE]</span>.
+					<br><br>
+					A instituição financeira BTG PACTUAL assume total responsabilidade pela liberação do crédito conforme os termos acordados entre as partes envolvidas. Garantimos que, após a finalização dos trâmites necessários e a devida aprovação, o valor do crédito será disponibilizado na conta designada pelo cliente dentro do prazo estabelecido
+					<br><br>
+					Esta garantia é emitida em conformidade com as políticas e procedimentos internos da instituição, e tem como objetivo assegurar ao cliente a confiabilidade e eficiência dos serviços prestados pela instituição financeira BTG PACTUAL.
+					<br><br>
+					Ressaltamos que estamos à disposição para quaisquer esclarecimentos adicionais que se façam necessários e reiteramos nosso compromisso em fornecer um serviço de excelência aos nossos clientes.
+					<br><br>
+					Atenciosamente,
+				</div>
+			</div>
+			
+			<div class="assinaturas">
+				<div class="a-modelo">
+					<img src="../../recursos/banco/gerente.svg" class="svg-gerente" alt="Assinatura do Gerente">
+					<div class="a-div"></div>
+					<div class="texto" id="gerente3">[GERENTE]</div>
+					<div class="texto-bold">GERENTE DE CRÉDITO | Banco BTG</div>
+				</div>
+				
+				<div class="selos">
+					<img src="../../recursos/documentos/selo-garantia.png" class="selo" alt="Selo">
+				</div>
+			</div>
+			
+			<img class="anbima" src="../../recursos/documentos/anbima.png" alt="Selo - Anbima">
+		</div>
+	
+		<div class="config" class="ocultar-na-impressao" id="config">
+			
+			<div class="config-container">
+				<div class="config-titulo">Dados do Documento</div>
+				<input type="text" class="input-config" id="i-gerente" placeholder="Gerente" required>
+				<input type="text" class="input-config" id="i-cliente" placeholder="Cliente" required>
+			</div>
+			
+			<button class="botao-desabilitado" id="botao-imprimir" disabled>EXPORTAR</button>
+		
+		</div>
+	</div>
+	<script src="../../scripts/garantia/imprimir.js"></script>
+	<script src="../../scripts/garantia/inputs.js"></script>
+	<script src="../../scripts/garantia/titulo.js"></script>
+</body>
+	
+</html>
